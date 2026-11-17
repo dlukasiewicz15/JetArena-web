@@ -17,8 +17,7 @@
       canvas.style.width = cw + 'px';
       canvas.style.height = ch + 'px';
       canvas.style.transform = 'rotate(90deg)';
-      canvas.width = Math.round(cw * dpr);
-      canvas.height = Math.round(ch * dpr);
+      window.__gameSize = [Math.round(cw * dpr), Math.round(ch * dpr)];
       st = { cw: cw, ch: ch, left: left, top: top };
     } else {
       canvas.style.left = '0px';
@@ -26,8 +25,7 @@
       canvas.style.width = W + 'px';
       canvas.style.height = H + 'px';
       canvas.style.transform = 'none';
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
+      window.__gameSize = [Math.round(W * dpr), Math.round(H * dpr)];
       st = null;
     }
   }
